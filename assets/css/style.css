@@ -1,0 +1,58 @@
+/*styling the fucking page*/
+body{
+    background-image: url("../css/images/background.jpeg");
+}
+
+div {
+    background-color: grey;
+    margin: 200px;
+    width: 25%;
+}
+div{
+    border: solid 5px red;
+    padding: 10px;
+}
+h1,h3, span{
+    font-weight: bold;
+    text-align: center;
+}
+h1{
+    font-size: 30pt;
+}
+ol{
+    list-style: decimal;
+}
+/* sizing the borders and whatnot*/
+div.header, div.gems{
+    background-color: blueviolet;
+}
+div.header, div.instructions{
+    width: 50%;
+}
+/*wins,loss, total shit to style*/
+.numToMatch, .winsAndLosses{
+    float: left;
+    width: 20%;
+    height: 100px;
+}
+.userTotal{
+    width: 15%;
+    height: 100px;
+}
+.back {
+    background-color: white;
+    height: 100px;
+    width: 50px;
+    float: left;
+    margin-right: 20px;
+    border-style: dotted;
+    border-width: 0.5px;
+    border-color: grey;
+
+}
+.gemImage {
+    height: 100px;
+    width: 100px;
+}
+
+
