@@ -42,9 +42,9 @@ div.header, div.instructions{
 .back {
     background-color: white;
     height: 100px;
-    width: 50px;
+    width: 100px;
     float: left;
-    margin-right: 20px;
+    margin-right: 20px; 
     border-style: dotted;
     border-width: 0.5px;
     border-color: grey;
