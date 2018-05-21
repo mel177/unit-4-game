@@ -1,23 +1,29 @@
 /*styling the fucking page*/
 body{
     background-image: url("../css/images/background.jpeg");
+    background-repeat:repeat;
+}
+.instructions{
+   display: inline;
+    
 }
 
 div {
     background-color: grey;
     margin: 10px;
     width: 20%;
-}
-div{
+    padding: 5px;
     border: solid 5px red;
-    padding: 10px;
 }
+
+    
+
 h1,h3, span{
     font-weight: bold;
     text-align: center;
 }
 h1{
-    font-size: 30pt;
+    font-size: 10pt;
 }
 ol{
     list-style: decimal inside;
@@ -26,12 +32,16 @@ ol{
 div.header, div.gems{
     background-color: blueviolet;
 }
-div.header, div.instructions{
-    width: 30%;
+/*, div.instructions*/
+
+div.header {
+    width: 20%;
+    
+
 }
 /*wins,loss, total shit to style*/
 .numToMatch, .winsAndLosses{
-    float: left;
+    float: right;
     width: 15%;
     height: 100px;
 }
