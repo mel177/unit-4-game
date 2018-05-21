@@ -8,6 +8,8 @@
 var yourScore = 0;
 var numLosses = 0;
 var userTotal = 0;
+var losses = 0;
+wins = 0;
 
 
 var compPicker =Math.floor(Math.random()*120+19);
@@ -29,9 +31,10 @@ var Gem4 = Math.floor(Math.random()*12+1);
 $('#numWins').text(yourScore);
 $('#numLosses').text(numLosses);
 
-//resets the game
-function reset(){
+//start the game
+function start(){
       numRand=Math.floor(Math.random()*120+19);
+      compPicker =Math.floor(Math.random()*120+19);
       console.log(compPicker)
       $('#randomNumber').text(compPicker);
       Gem1 = Math.floor(Math.random()*12+1);
@@ -41,6 +44,9 @@ function reset(){
       userTotal = 0; 
       $('#finalTotal').text(userTotal);
     }
+    
+
+    start();
 
     //adds wins to userTotal
     function win(){
@@ -48,7 +54,7 @@ function reset(){
       alert("You win!");
       wins++;
       $("#numWins").text(yourScore);
-      restartGame();
+      start();
     }
 
     // add losses to userTotal
@@ -56,7 +62,7 @@ function reset(){
       alert ("You Lose!");
         losses++;
         $('#numLosses').text(losses);
-        restartGame();
+        start();
     }
 
     // when clicking each Gem, a number will generate
@@ -64,7 +70,7 @@ function reset(){
     // user will continue to click another Gem to get the target number that was given 
 
     $('#Gem1').on('click', function(){
-      userTotal = userTotal + Gem1[0];
+      userTotal = userTotal + Gem1;
       console.log("New userTotal= " + userTotal);
       $('#finalTotal').text(userTotal);
         if (userTotal == compPicker){
@@ -76,7 +82,7 @@ function reset(){
     })
 
     $('#Gem2').on('click', function(){
-      userTotal = userTotal + Gem2[1];
+      userTotal = userTotal + Gem2;
       console.log("New userTotal= " + userTotal);
       $('#finalTotal').text(userTotal);
         if (userTotal == compPicker){
@@ -88,7 +94,7 @@ function reset(){
     })
 
     $('#Gem3').on('click', function(){
-      userTotal = userTotal + Gem3[2];
+      userTotal = userTotal + Gem3;
       console.log("New userTotal= " + userTotal);
       $('#finalTotal').text(userTotal);
 
@@ -102,7 +108,7 @@ function reset(){
 })
 
 $('#Gem4').on('click', function(){
-  userTotal = userTotal + Gem4[1];
+  userTotal = userTotal + Gem4;
   console.log("New userTotal= " + userTotal);
   $('#finalTotal').text(userTotal);
     if (userTotal == randomNumber){
