@@ -64,7 +64,7 @@ function reset(){
     // user will continue to click another Gem to get the target number that was given 
 
     $('#Gem1').on('click', function(){
-      userTotal = userTotal + num1[0];
+      userTotal = userTotal + Gem1[0];
       console.log("New userTotal= " + userTotal);
       $('#finalTotal').text(userTotal);
         if (userTotal == compPicker){
@@ -76,7 +76,7 @@ function reset(){
     })
 
     $('#Gem2').on('click', function(){
-      userTotal = userTotal + num1[1];
+      userTotal = userTotal + Gem2[1];
       console.log("New userTotal= " + userTotal);
       $('#finalTotal').text(userTotal);
         if (userTotal == compPicker){
@@ -88,7 +88,7 @@ function reset(){
     })
 
     $('#Gem3').on('click', function(){
-      userTotal = userTotal + num1[2];
+      userTotal = userTotal + Gem3[2];
       console.log("New userTotal= " + userTotal);
       $('#finalTotal').text(userTotal);
 
@@ -102,7 +102,7 @@ function reset(){
 })
 
 $('#Gem4').on('click', function(){
-  userTotal = userTotal + num1[1];
+  userTotal = userTotal + Gem4[1];
   console.log("New userTotal= " + userTotal);
   $('#finalTotal').text(userTotal);
     if (userTotal == randomNumber){
