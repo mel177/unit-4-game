@@ -5,7 +5,7 @@
 // calling out the variables and selecting a random number to be shown in Number to Get
 
 
-var numWins = 0;
+var yourScore = 0;
 var numLosses = 0;
 var userTotal = 0;
 
@@ -26,8 +26,8 @@ var Gem4 = Math.floor(Math.random()*12+1);
 
 // declaring variables for wins and loss
 
-$('#numWins').text(wins);
-$('#numLosses').text(losses);
+$('#numWins').text(yourScore);
+$('#numLosses').text(numLosses);
 
 //resets the game
 function reset(){
@@ -38,7 +38,7 @@ function reset(){
       Gem2 = Math.floor(Math.random()*12+1);
       Gem3 = Math.floor(Math.random()*12+1);
       Gem4 = Math.floor(Math.random()*12+1);
-      userTotal = 0;
+      userTotal = 0; 
       $('#finalTotal').text(userTotal);
     }
 
@@ -47,7 +47,7 @@ function reset(){
 
       alert("You win!");
       wins++;
-      $("#numWins").text(wins);
+      $("#numWins").text(yourScore);
       restartGame();
     }
 
@@ -59,7 +59,9 @@ function reset(){
         restartGame();
     }
 
-    // when clicking each Gem, this is where i assign the random number formula
+    // when clicking each Gem, a number will generate
+    // user will click another Gem to get another random number that will be added to the 1st click
+    // user will continue to click another Gem to get the target number that was given 
 
     $('#Gem1').on('click', function(){
       userTotal = userTotal + num1[0];
