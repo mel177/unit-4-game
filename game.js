@@ -10,13 +10,13 @@ var numLosses = 0;
 var userTotal = 0;
 
 
-Random=Math.floor(Math.random()*120+19);
-console.log(numRand)
-$('#randomNumber').text(numRand);
+var compPicker =Math.floor(Math.random()*120+19);
 
 
 
-// assigning random number function to the id Gem1-4
+
+
+// gernerating random number function to the id Gem1-4
 // when click on the Gem, the value will change in html
 
 var Gem1 = Math.floor(Math.random()*12+1);
@@ -32,8 +32,8 @@ $('#numLosses').text(losses);
 //resets the game
 function reset(){
       numRand=Math.floor(Math.random()*120+19);
-      console.log(numRand)
-      $('#randomNumber').text(numRand);
+      console.log(compPicker)
+      $('#randomNumber').text(compPicker);
       Gem1 = Math.floor(Math.random()*12+1);
       Gem2 = Math.floor(Math.random()*12+1);
       Gem3 = Math.floor(Math.random()*12+1);
@@ -65,10 +65,10 @@ function reset(){
       userTotal = userTotal + num1[0];
       console.log("New userTotal= " + userTotal);
       $('#finalTotal').text(userTotal);
-        if (userTotal == numRand){
+        if (userTotal == compPicker){
           win();
         }
-        else if ( userTotal > numRand){
+        else if ( userTotal > compPicker){
           lose();
         }
     })
@@ -77,10 +77,10 @@ function reset(){
       userTotal = userTotal + num1[1];
       console.log("New userTotal= " + userTotal);
       $('#finalTotal').text(userTotal);
-        if (userTotal == numRand){
+        if (userTotal == compPicker){
           win();
         }
-        else if ( userTotal > numRand){
+        else if ( userTotal > compPicker){
           lose();
         }
     })
@@ -91,10 +91,10 @@ function reset(){
       $('#finalTotal').text(userTotal);
 
 // win/lose conditions
-    if (userTotal == numRand){
+    if (userTotal == compPicker){
        win();
     }
-    else if ( userTotal > numRand){
+    else if ( userTotal > compPicker){
       lose();
 }
 })
@@ -103,10 +103,10 @@ $('#Gem4').on('click', function(){
   userTotal = userTotal + num1[1];
   console.log("New userTotal= " + userTotal);
   $('#finalTotal').text(userTotal);
-    if (userTotal == numRand){
+    if (userTotal == randomNumber){
       win();
     }
-    else if ( userTotal > numRand){
+    else if ( userTotal > compPicker){
       lose();
     }
 })
